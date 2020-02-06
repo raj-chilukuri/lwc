@@ -48,9 +48,12 @@ import { arrayFromCollection, getOwnerDocument, getOwnerWindow } from '../shared
 const TabbableElementsQuery = `
     button:not([tabindex="-1"]):not([disabled]),
     [contenteditable]:not([tabindex="-1"]),
+    a[href]:not([tabindex="-1"]),
+    area[href]:not([tabindex="-"]),
+    svg a[xlink:href]:not([tabindex="-"]),
     video[controls]:not([tabindex="-1"]),
     audio[controls]:not([tabindex="-1"]),
-    [href]:not([tabindex="-1"]),
+    iframe:not([tabindex="-1"]),
     input:not([tabindex="-1"]):not([disabled]),
     select:not([tabindex="-1"]):not([disabled]),
     textarea:not([tabindex="-1"]):not([disabled]),
